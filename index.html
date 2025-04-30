@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lekkala Abhinay Reddy | Portfolio</title>
+  <style>
+    :root {
+      --primary: #0070f3;
+      --bg-light: #f5f5f5;
+      --bg-white: #ffffff;
+      --text-dark: #111;
+      --text-muted: #555;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; background: var(--bg-light); color: var(--text-dark); }
+    nav { background: var(--bg-white); padding: 1rem 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 10; }
+    nav ul { display: flex; justify-content: center; gap: 2rem; list-style: none; }
+    nav a { text-decoration: none; color: var(--text-dark); font-weight: 500; }
+    nav a:hover { color: var(--primary); }
+    .hero { background: var(--bg-white); text-align: center; padding: 4rem 1rem; margin-bottom: 2rem; }
+    .hero img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid var(--bg-light); }
+    .hero h1 { margin: 1rem 0 0.5rem; font-size: 2.5rem; }
+    .hero p { font-size: 1.1rem; color: var(--text-muted); }
+    section { max-width: 900px; margin: 0 auto 2rem; padding: 0 1rem; }
+    h2 { font-size: 1.75rem; margin-bottom: 1rem; border-left: 4px solid var(--primary); padding-left: 0.5rem; color: var(--text-dark); }
+    .grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .card { background: var(--bg-white); padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+    .card h3 { margin-bottom: 0.5rem; color: var(--text-dark); }
+    .card p { margin-bottom: 0.5rem; color: var(--text-muted); }
+    .card ul { padding-left: 1.2rem; color: var(--text-muted); }
+    footer { text-align: center; padding: 1rem; background: var(--bg-white); color: var(--text-muted); }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#internships">Internships</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#training">Training</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" id="home">
+    <img src="your-photo.jpg" alt="Lekkala Abhinay Reddy">
+    <h1>Lekkala Abhinay Reddy</h1>
+    <p>AI Engineer | Machine Learning Developer</p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a 3rd-year B.Tech Computer Science student at Lovely Professional University, passionate about AI, Machine Learning, and Cybersecurity. I have hands-on experience from internships and training, and I enjoy building impactful, scalable solutions.</p>
+  </section>
+
+  <section id="internships">
+    <h2>1. Internship Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>AI Voice Assistant – Academor AI Internship</h3>
+        <p>Built a voice-enabled assistant for weather updates, Wikipedia summaries, and email functionalities via voice commands.</p>
+        <ul>
+          <li>Integrated speech-to-text and text-to-speech capabilities.</li>
+          <li>Implemented voice-controlled search and email automation using Python.</li>
+          <li>Collaborated with teams to deploy the assistant on cloud platforms.</li>
+          <li>Optimized response accuracy by fine-tuning NLP models.</li>
+        </ul>
+        <p><strong>Tech:</strong> Python, Flask, NLP, SpeechRecognition, gTTS</p>
+      </div>
+  </section>
+
+  <section id="projects">
+    <h2>2. Personal Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Smart Chatbot for Customer Support</h3>
+        <p>Multilingual chatbot answering FAQs via WhatsApp integration.</p>
+        <p><strong>Tech:</strong> Python, Flask, Twilio API, NLP</p>
+      </div>
+      <div class="card">
+        <h3>Bill Splitter Tool</h3>
+        <p>Desktop application for splitting bills among users and storing records.</p>
+        <p><strong>Tech:</strong> Python, Tkinter, SQLite</p>
+      </div>
+      <div class="card">
+        <h3>Sports Rules & History Website</h3>
+        <p>Static responsive site detailing rules and history of popular sports.</p>
+        <p><strong>Tech:</strong> HTML5, CSS3</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="training">
+    <h2>3. Training Projects</h2>
+    <div class="card">
+      <h3>RHCSA Training Projects</h3>
+      <p>Completed practical system administration exercises during RHCSA certification.</p>
+      <ul>
+        <li>User and permission management on Red Hat Linux.</li>
+        <li>Applied system hardening and security protocols.</li>
+        <li>Automated tasks using Bash scripts and cron jobs.</li>
+        <li>Logged system changes and audit reports for compliance.</li>
+      </ul>
+      <p><strong>Tech:</strong> Red Hat Linux, Bash, Cron</p>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>4. Certifications</h2>
+    <div class="grid">
+      <div class="card"><h3>RHCSA (Red Hat Certified System Administrator)</h3></div>
+      <div class="card"><h3>TensorFlow Developer Certificate</h3></div>
+      <div class="card"><h3>Cybersecurity Essentials – Cisco</h3></div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>5. Skills</h2>
+    <div class="grid">
+      <div class="card"><h3>Languages</h3><p>Python, C++, JavaScript, HTML, CSS</p></div>
+      <div class="card"><h3>Frameworks & Tools</h3><p>Flask, TensorFlow, PyTorch, Git, SQL</p></div>
+      <div class="card"><h3>Concepts</h3><p>Machine Learning, NLP, Cybersecurity, DevOps</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>6. Contact</h2>
+    <p>Email: <a href="mailto:abhilekkala57@gmail.com">abhilekkala57@gmail.com</a></p>
+    <p>Mobile: +91 8688118667</p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/abhilekkala/" target="_blank">linkedin.com/in/abhilekkala</a></p>
+    <p>GitHub: <a href="https://github.com/Abhinayreddylekkala" target="_blank">github.com/Abhinayreddylekkala</a></p>
+    <p><a href="resume.pdf" download>Download Resume (PDF)</a></p> <!-- Place resume.pdf in the same folder as this HTML file -->
+  </section>
+
+  <footer>
+    &copy; 2025 Lekkala Abhinay Reddy. All rights reserved.
+  </footer>
+</body>
+</html>
