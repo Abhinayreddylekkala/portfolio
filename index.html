@@ -13,131 +13,139 @@
       --text-muted: #555;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', sans-serif; background: var(--bg-light); color: var(--text-dark); }
+    body { font-family: 'Segoe UI', sans-serif; background: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
     nav { background: var(--bg-white); padding: 1rem 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 10; }
-    nav ul { display: flex; justify-content: center; gap: 2rem; list-style: none; }
-    nav a { text-decoration: none; color: var(--text-dark); font-weight: 500; }
+    nav ul { display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; list-style: none; }
+    nav a { text-decoration: none; color: var(--text-dark); font-weight: 500; transition: color 0.2s; }
     nav a:hover { color: var(--primary); }
-    .hero { background: var(--bg-white); text-align: center; padding: 4rem 1rem; margin-bottom: 2rem; }
-    .hero img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid var(--bg-light); }
+    .hero { background: var(--bg-white); text-align: center; padding: 4rem 1rem; }
+    .hero img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid var(--bg-light); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
     .hero h1 { margin: 1rem 0 0.5rem; font-size: 2.5rem; }
-    .hero p { font-size: 1.1rem; color: var(--text-muted); }
-    section { max-width: 900px; margin: 0 auto 2rem; padding: 0 1rem; }
-    h2 { font-size: 1.75rem; margin-bottom: 1rem; border-left: 4px solid var(--primary); padding-left: 0.5rem; color: var(--text-dark); }
+    .hero .subtitle { font-size: 1.2rem; color: var(--text-muted); margin-bottom: 1rem; }
+    .hero .summary { max-width: 700px; margin: 0 auto; font-size: 1.1rem; color: #333; }
+    section { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+    h2 { font-size: 1.75rem; margin-bottom: 1.5rem; border-left: 4px solid var(--primary); padding-left: 0.75rem; color: var(--text-dark); }
     .grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-    .card { background: var(--bg-white); padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
-    .card h3 { margin-bottom: 0.5rem; color: var(--text-dark); }
-    .card p { margin-bottom: 0.5rem; color: var(--text-muted); }
-    .card ul { padding-left: 1.2rem; color: var(--text-muted); }
-    footer { text-align: center; padding: 1rem; background: var(--bg-white); color: var(--text-muted); }
+    .card { background: var(--bg-white); padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); transition: transform 0.2s, box-shadow 0.2s; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 6px 12px rgba(0,0,0,0.1); }
+    .card h3 { margin-bottom: 0.75rem; color: var(--primary); }
+    .card h3 span { font-size: 0.9rem; color: var(--text-muted); font-weight: 400; float: right; }
+    .card p { margin-bottom: 0.75rem; color: var(--text-muted); }
+    .card ul { margin-top: 1rem; padding-left: 1.2rem; color: var(--text-muted); }
+    .card ul li { margin-bottom: 0.5rem; }
+    .tech-stack { margin-top: 1rem; font-size: 0.9rem; }
+    footer { text-align: center; padding: 2rem 1rem; margin-top: 3rem; background: var(--bg-white); color: var(--text-muted); }
+    .contact-info p { margin-bottom: 0.5rem; }
+    .contact-info a { color: var(--primary); text-decoration: none; }
+    .contact-info a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
   <nav>
     <ul>
       <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#internships">Internships</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#training">Training</a></li>
-      <li><a href="#certifications">Certifications</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <section class="hero" id="home">
-    <img src="your-photo.jpg" alt="Lekkala Abhinay Reddy">
-    <h1>Lekkala Abhinay Reddy</h1>
-    <p>AI Engineer | Machine Learning Developer</p>
-  </section>
+  <header class="hero" id="home">
+    <img src="your-photo.jpg" alt="Lekkala Abhinay Reddy"> <h1>Lekkala Abhinay Reddy</h1>
+    <p class="subtitle">AI Engineer | DevOps Enthusiast</p>
+    <p class="summary">Computer Science student with a passion for building intelligent systems. My journey has taken me from automating system administration to architecting end-to-end MLOps pipelines, with a strong foundation in both Machine Learning and DevOps principles.</p>
+  </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am a 3rd-year B.Tech Computer Science student at Lovely Professional University, passionate about AI, Machine Learning, and Cybersecurity. I have hands-on experience from internships and training, and I enjoy building impactful, scalable solutions.</p>
-  </section>
-
-  <section id="internships">
-    <h2>1. Internship Projects</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>AI Voice Assistant – Academor AI Internship</h3>
-        <p>Built a voice-enabled assistant for weather updates, Wikipedia summaries, and email functionalities via voice commands.</p>
-        <ul>
-          <li>Integrated speech-to-text and text-to-speech capabilities.</li>
-          <li>Implemented voice-controlled search and email automation using Python.</li>
-          <li>Collaborated with teams to deploy the assistant on cloud platforms.</li>
-          <li>Optimized response accuracy by fine-tuning NLP models.</li>
-        </ul>
-        <p><strong>Tech:</strong> Python, Flask, NLP, SpeechRecognition, gTTS</p>
+  <main>
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>AI & Machine Learning</h3>
+          <p>Python, TensorFlow, PyTorch, Scikit-learn, NLTK, SpaCy, NumPy, Pandas, Speech Recognition</p>
+        </div>
+        <div class="card">
+          <h3>DevOps & Cloud</h3>
+          <p>Docker, CI/CD (GitHub Actions), Git, Cron jobs, Nmap, Packet Analyzers</p>
+        </div>
+        <div class="card">
+          <h3>Languages & Databases</h3>
+          <p>Java, C++, C, SQL, HTML, CSS, JavaScript</p>
+        </div>
       </div>
-  </section>
+    </section>
 
-  <section id="projects">
-    <h2>2. Personal Projects</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Smart Chatbot for Customer Support</h3>
-        <p>Multilingual chatbot answering FAQs via WhatsApp integration.</p>
-        <p><strong>Tech:</strong> Python, Flask, Twilio API, NLP</p>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid">
+        
+        <div class="card">
+          <h3>End-to-End MLOps Pipeline <span>Apr 2025-Present</span></h3>
+          <ul>
+            <li>Architected and implemented a full MLOps pipeline to automate the training, versioning, and deployment of a customer support chatbot.</li>
+            <li>Containerized the Flask application using Docker for consistent, portable deployment.</li>
+            <li>Configured a CI/CD workflow with GitHub Actions to automate model retraining and testing.</li>
+            <li>Deployed the final model as a scalable REST API on AWS, demonstrating production readiness.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>AI Internship Project <span>July 2025-Present</span></h3>
+          <ul>
+            <li>Developing a voice-activated AI assistant capable of understanding and executing spoken commands in real time.</li>
+            <li>Integrating OpenAI API, TensorFlow models, and Flask APIs for seamless interaction.</li>
+            <li>Utilizing Python, TensorFlow, NLTK, and SpaCy to build and deploy the application.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Farmer Ledger Web Application <span>June 2025</span></h3>
+          <ul>
+            <li>Developed a full-stack, serverless web application to replace a manual accounting system, eliminating data entry errors and improving data integrity by 100%.</li>
+            <li>Engineered a secure, real-time system using Firebase Authentication and Firestore for full CRUD functionality.</li>
+            <li>Designed a dynamic, mobile-first UI with Tailwind CSS that handles complex calculation logic.</li>
+          </ul>
+          <p class="tech-stack"><strong>Tech:</strong> JavaScript, HTML5, CSS3, Tailwind CSS, Firebase</p>
+        </div>
+
+        <div class="card">
+          <h3>Smart Chatbot for Customer Support <span>Mar 2025-Apr 2025</span></h3>
+          <ul>
+            <li>Engineered an AI-driven chatbot to automate customer support operations.</li>
+            <li>Applied NLP techniques using NLTK/SpaCy to analyze and classify customer intents.</li>
+            <li>Deployed the solution via Flask and integrated with the WhatsApp API for real-time communication.</li>
+          </ul>
+          <p class="tech-stack"><strong>Tech:</strong> Python, NLP, WhatsApp API, Scikit-Learn, TensorFlow</p>
+        </div>
+
       </div>
-      <div class="card">
-        <h3>Bill Splitter Tool</h3>
-        <p>Desktop application for splitting bills among users and storing records.</p>
-        <p><strong>Tech:</strong> Python, Tkinter, SQLite</p>
+    </section>
+
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <div class="grid">
+        <div class="card"><h3>DeepLearning.AI TensorFlow Developer</h3><p>Issued by Coursera</p></div>
+        <div class="card"><h3>Red Hat Certified System Administrator (RHCSA)</h3><p>Based on RH124 & RH134 Training</p></div>
+        <div class="card"><h3>Generative AI with Large Language Models</h3><p>Issued by Coursera</p></div>
+        <div class="card"><h3>Natural Language Processing</h3><p>Classification and Vector Spaces</p></div>
+        <div class="card"><h3>Cybersecurity Attack and Defense Fundamentals</h3><p>Issued by Coursera</p></div>
+        <div class="card"><h3>Introduction to Machine Learning</h3><p>Issued by NPTEL</p></div>
       </div>
-      <div class="card">
-        <h3>Sports Rules & History Website</h3>
-        <p>Static responsive site detailing rules and history of popular sports.</p>
-        <p><strong>Tech:</strong> HTML5, CSS3</p>
-      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="contact-info">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:abhilekkala57@gmail.com">abhilekkala57@gmail.com</a></p>
+      <p>Mobile: <a href="tel:+918688118667">+91 8688118667</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/abhilekkala/" target="_blank">linkedin.com/in/abhilekkala</a></p>
+      <p>GitHub: <a href="https://github.com/Abhinayreddylekkala" target="_blank">github.com/Abhinayreddylekkala</a></p>
+      <br>
+      <p>&copy; 2025 Lekkala Abhinay Reddy. All rights reserved.</p>
     </div>
-  </section>
-
-  <section id="training">
-    <h2>3. Training Projects</h2>
-    <div class="card">
-      <h3>RHCSA Training Projects</h3>
-      <p>Completed practical system administration exercises during RHCSA certification.</p>
-      <ul>
-        <li>User and permission management on Red Hat Linux.</li>
-        <li>Applied system hardening and security protocols.</li>
-        <li>Automated tasks using Bash scripts and cron jobs.</li>
-        <li>Logged system changes and audit reports for compliance.</li>
-      </ul>
-      <p><strong>Tech:</strong> Red Hat Linux, Bash, Cron</p>
-    </div>
-  </section>
-
-  <section id="certifications">
-    <h2>4. Certifications</h2>
-    <div class="grid">
-      <div class="card"><h3>RHCSA (Red Hat Certified System Administrator)</h3></div>
-      <div class="card"><h3>TensorFlow Developer Certificate</h3></div>
-      <div class="card"><h3>Cybersecurity Essentials – Cisco</h3></div>
-    </div>
-  </section>
-
-  <section id="skills">
-    <h2>5. Skills</h2>
-    <div class="grid">
-      <div class="card"><h3>Languages</h3><p>Python, C++, JavaScript, HTML, CSS</p></div>
-      <div class="card"><h3>Frameworks & Tools</h3><p>Flask, TensorFlow, PyTorch, Git, SQL</p></div>
-      <div class="card"><h3>Concepts</h3><p>Machine Learning, NLP, Cybersecurity, DevOps</p></div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>6. Contact</h2>
-    <p>Email: <a href="mailto:abhilekkala57@gmail.com">abhilekkala57@gmail.com</a></p>
-    <p>Mobile: +91 8688118667</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/abhilekkala/" target="_blank">linkedin.com/in/abhilekkala</a></p>
-    <p>GitHub: <a href="https://github.com/Abhinayreddylekkala" target="_blank">github.com/Abhinayreddylekkala</a></p>
-    <p><a href="resume.pdf" download>Download Resume (PDF)</a></p> <!-- Place resume.pdf in the same folder as this HTML file -->
-  </section>
-
-  <footer>
-    &copy; 2025 Lekkala Abhinay Reddy. All rights reserved.
   </footer>
+
 </body>
 </html>
