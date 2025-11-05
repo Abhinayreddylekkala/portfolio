@@ -34,6 +34,39 @@
     .card ul { margin-top: 1rem; padding-left: 1.2rem; color: var(--text-muted); }
     .card ul li { margin-bottom: 0.5rem; }
     .tech-stack { margin-top: 1rem; font-size: 0.9rem; }
+    
+    /* === STYLES FOR PROJECT LINKS === */
+    .card-links {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .card-links a {
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background-color 0.2s;
+    }
+    .card-links a.link-repo {
+      color: var(--primary);
+      border: 1px solid var(--primary);
+    }
+    .card-links a.link-repo:hover {
+      background-color: #f0f7ff; /* A very light blue */
+    }
+    .card-links a.link-live {
+      color: #27ae60; /* Green */
+      border: 1px solid #27ae60;
+    }
+    .card-links a.link-live:hover {
+      background-color: #f0fff8; /* A very light green */
+    }
+    /* === END OF LINK STYLES === */
+
     footer { text-align: center; padding: 2rem 1rem; margin-top: 3rem; background: var(--bg-white); color: var(--text-muted); }
     .contact-info p { margin-bottom: 0.5rem; }
     .contact-info a { color: var(--primary); text-decoration: none; }
@@ -52,7 +85,8 @@
   </nav>
 
   <header class="hero" id="home">
-    <img src="your-photo.jpg" alt="Lekkala Abhinay Reddy"> <h1>Lekkala Abhinay Reddy</h1>
+    <img src="your-photo.jpg" alt="Lekkala Abhinay Reddy">
+    <h1>Lekkala Abhinay Reddy</h1>
     <p class="subtitle">AI Engineer | DevOps Enthusiast</p>
     <p class="summary">Computer Science student with a passion for building intelligent systems. My journey has taken me from automating system administration to architecting end-to-end MLOps pipelines, with a strong foundation in both Machine Learning and DevOps principles.</p>
   </header>
@@ -63,15 +97,15 @@
       <div class="grid">
         <div class="card">
           <h3>AI & Machine Learning</h3>
-          <p>Python, TensorFlow, PyTorch, Scikit-learn, NLTK, SpaCy, NumPy, Pandas, Speech Recognition</p>
+          <p>Python, TensorFlow, PyTorch, Scikit-learn, NLTK, SpaCy, NumPy, Pandas, Speech Recognition, LangChain, OpenAI API</p>
         </div>
         <div class="card">
           <h3>DevOps & Cloud</h3>
-          <p>Docker, CI/CD (GitHub Actions), Git, Cron jobs, Nmap, Packet Analyzers</p>
+          <p>Docker, Kubernetes, CI/CD (GitHub Actions, Jenkins), Git, AWS, GCP, Firebase, Netlify, MLOps</p>
         </div>
         <div class="card">
           <h3>Languages & Databases</h3>
-          <p>Java, C++, C, SQL, HTML, CSS, JavaScript</p>
+          <p>Python, Java, C++, C, SQL (MySQL), NoSQL (Firestore), HTML, CSS, JavaScript, Flask</p>
         </div>
       </div>
     </section>
@@ -88,6 +122,10 @@
             <li>Configured a CI/CD workflow with GitHub Actions to automate model retraining and testing.</li>
             <li>Deployed the final model as a scalable REST API on AWS, demonstrating production readiness.</li>
           </ul>
+          <div class="card-links">
+            <a href="https://github.com/Abhinayreddylekkala/End-to-End-MLOps-Pipeline" target="_blank" class="link-repo">GitHub Repo</a>
+          </div>
+          <p class="tech-stack"><strong>Tech:</strong> Python, Flask, Docker, CI/CD (GitHub Actions), AWS, MLOps</p>
         </div>
 
         <div class="card">
@@ -97,6 +135,10 @@
             <li>Integrating OpenAI API, TensorFlow models, and Flask APIs for seamless interaction.</li>
             <li>Utilizing Python, TensorFlow, NLTK, and SpaCy to build and deploy the application.</li>
           </ul>
+           <div class="card-links">
+            <a href="https://github.com/Abhinayreddylekkala/ai-personal-bot" target="_blank" class="link-repo">GitHub Repo</a>
+          </div>
+          <p class="tech-stack"><strong>Tech:</strong> Python, TensorFlow, OpenAI API, Flask, NLTK, LangChain</p>
         </div>
 
         <div class="card">
@@ -106,17 +148,24 @@
             <li>Engineered a secure, real-time system using Firebase Authentication and Firestore for full CRUD functionality.</li>
             <li>Designed a dynamic, mobile-first UI with Tailwind CSS that handles complex calculation logic.</li>
           </ul>
-          <p class="tech-stack"><strong>Tech:</strong> JavaScript, HTML5, CSS3, Tailwind CSS, Firebase</p>
+          <div class="card-links">
+            <a href="https://studio-5069678194-17ec6.web.app/" target="_blank" class="link-live">Live Demo</a>
+            <a href="https://github.com/Abhinayreddylekkala/Farmer-Ledger-Web-Application" target="_blank" class="link-repo">GitHub Repo</a>
+          </div>
+          <p class="tech-stack"><strong>Tech:</strong> JavaScript, HTML5, CSS3, Tailwind CSS, Firebase (Firestore, Auth), Netlify</p>
         </div>
 
         <div class="card">
-          <h3>Smart Chatbot for Customer Support <span>Mar 2025-Apr 2025</span></h3>
+          <h3>AI-Powered Personal Assistant <span>Jan 2025</span></h3>
           <ul>
-            <li>Engineered an AI-driven chatbot to automate customer support operations.</li>
-            <li>Applied NLP techniques using NLTK/SpaCy to analyze and classify customer intents.</li>
-            <li>Deployed the solution via Flask and integrated with the WhatsApp API for real-time communication.</li>
+            <li>Created a voice-activated personal assistant that can interpret spoken commands to carry out a variety of tasks.</li>
+            <li>Incorporated modules for voice-based email, weather data retrieval, and Wikipedia content summarisation.</li>
+            <li>Used Flask to deploy the interface and Python libraries such as gTTS and Speech Recognition API.</li>
           </ul>
-          <p class="tech-stack"><strong>Tech:</strong> Python, NLP, WhatsApp API, Scikit-Learn, TensorFlow</p>
+           <div class="card-links">
+            <a href="https://github.com/Abhinayreddylekkala/ai-personal-bot" target="_blank" class="link-repo">GitHub Repo</a>
+          </div>
+          <p class="tech-stack"><strong>Tech:</strong> Python, Flask, Speech Recognition API, gTTS, NLP</p>
         </div>
 
       </div>
@@ -125,12 +174,24 @@
     <section id="certifications">
       <h2>Certifications</h2>
       <div class="grid">
-        <div class="card"><h3>DeepLearning.AI TensorFlow Developer</h3><p>Issued by Coursera</p></div>
-        <div class="card"><h3>Red Hat Certified System Administrator (RHCSA)</h3><p>Based on RH124 & RH134 Training</p></div>
-        <div class="card"><h3>Generative AI with Large Language Models</h3><p>Issued by Coursera</p></div>
-        <div class="card"><h3>Natural Language Processing</h3><p>Classification and Vector Spaces</p></div>
-        <div class="card"><h3>Cybersecurity Attack and Defense Fundamentals</h3><p>Issued by Coursera</p></div>
-        <div class="card"><h3>Introduction to Machine Learning</h3><p>Issued by NPTEL</p></div>
+        <a href="[YOUR_CERTIFICATE_LINK_HERE]" target="_blank" style="text-decoration:none; color:inherit;">
+          <div class="card"><h3>DeepLearning.AI TensorFlow Developer</h3><p>Issued by Coursera</p></div>
+        </a>
+        <a href="[YOUR_CERTIFICATE_LINK_HERE]" target="_blank" style="text-decoration:none; color:inherit;">
+          <div class="card"><h3>Red Hat Certified System Administrator (RHCSA)</h3><p>Based on RH124 & RH134 Training</p></div>
+        </a>
+        <a href="[YOUR_CERTIFICATE_LINK_HERE]" target="_blank" style="text-decoration:none; color:inherit;">
+          <div class="card"><h3>Generative AI with Large Language Models</h3><p>Issued by Coursera</p></div>
+        </a>
+        <a href="[YOUR_CERTIFICATE_LINK_HERE]" target="_blank" style="text-decoration:none; color:inherit;">
+          <div class="card"><h3>Natural Language Processing</h3><p>Classification and Vector Spaces (Coursera)</p></div>
+        </a>
+        <a href="[YOUR_CERTIFICATE_LINK_HERE]" target="_blank" style="text-decoration:none; color:inherit;">
+          <div class="card"><h3>Cybersecurity Attack and Defense Fundamentals</h3><p>Issued by Coursera</p></div>
+        </a>
+        <a href="https://archive.nptel.ac.in/content/noc/NOC25/SEM1/Ecertificates/106/noc25-cs46/Course/NPTEL25CS46S34750061304384148.pdf" target="_blank" style="text-decoration:none; color:inherit;">
+          <div class="card"><h3>Introduction to Machine Learning</h3><p>Issued by NPTEL</p></div>
+        </a>
       </div>
     </section>
   </main>
